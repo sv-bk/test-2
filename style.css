@@ -129,6 +129,8 @@ body {
     border-radius: 10px;
     position: absolute;
     transform: translateY(-7px);
+    z-index: 1;
+    background-color: transparent;
 }
 .cap-2 {
     width: 70px;
@@ -220,7 +222,7 @@ body {
 }
 
 p {
-    font-size: 30px;
+    font-size: 20px;
     font-family: Arial, sans-serif;
     text-align: center;
 }
@@ -243,51 +245,3 @@ audio {
     z-index: -1;
 }
 
-@media (max-width: 480px) {
-    html, body {
-        overflow-x: hidden;
-        min-height: 100dvh;
-    }
-
-    /* Thu nhỏ cả cảnh bánh + bàn */
-    .container {
-        zoom: 0.65;
-        -webkit-text-size-adjust: 100%;
-    }
-
-    p {
-        font-size: 22px;
-        padding: 0 16px;
-    }
-
-    /* Ảnh và audio: bỏ translate(-500px, 300px) vì sẽ trượt ra ngoài màn hình */
-    img {
-        position: static;
-        transform: none;
-        width: 80vw;
-        max-width: 320px;
-        height: auto;
-        margin: 16px auto;
-        z-index: auto;
-    }
-
-    audio {
-        position: static;
-        transform: none;
-        width: 90%;
-        z-index: auto;
-        margin-bottom: 16px;
-    }
-}
-
-@media (max-width: 375px) {
-    .container { zoom: 0.55; }
-}
-
-@media (min-width: 414px) and (max-width: 480px) {
-    .container { zoom: 0.7; }
-}
-
-@media (max-height: 500px) and (orientation: landscape) {
-    .container { zoom: 0.5; }
-}
